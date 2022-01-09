@@ -33,7 +33,7 @@ GPV was created and tested with [Apache Tomcat 9.0.56](https://tomcat.apache.org
 
 #### <a name="install-tomcat-en"></a>Installation on Apache Tomcat web server
 
-[Download](https://github.com/Acryval/GithubProfileViewer/releases/tag/v1.0.0) the GithubProfileViewer-X.X.X.war file
+[Download](https://github.com/Acryval/GithubProfileViewer/releases/tag/v1.0.1) the GithubProfileViewer-vX.X.X.war file
 
 1. Tomcat Web App Deployment guide
     * Refer to the [Tomcat Web Application Deployment](https://tomcat.apache.org/tomcat-9.0-doc/deployer-howto.html)
@@ -124,7 +124,6 @@ In addition to listing all repositories of a given user, one could add the possi
         * [Lokalizacja językowa](#possib-ui-lang-pl)
         * [Prezentacja danych](#possib-ui-data-pl)
     * [Filtrowanie repozytoriów użytkownika](#possib-filter-pl)
-    * [Lokalizacja językowa](#possib-lang-pl)
 
 ## <a name="overview-pl"></a>Przegląd
 
@@ -141,7 +140,7 @@ GPV został stworzony i był testowany przy użyciu serwera [Apache Tomcat 9.0.5
 
 #### <a name="install-tomcat-pl"></a>Instalacja na serwerze Apache Tomcat
 
-[Ściagnij](https://github.com/Acryval/GithubProfileViewer/releases/tag/v1.0.0) plik GithubProfileViewer-X.X.X.war
+[Ściagnij](https://github.com/Acryval/GithubProfileViewer/releases/tag/v1.0.1) plik GithubProfileViewer-vX.X.X.war
 
 1. Wdrożenie używając przewodnika [Tomcat Web Application Deployment](https://tomcat.apache.org/tomcat-9.0-doc/deployer-howto.html)
     * Wykonuj kroki zgodnie z przedstawioną instrukcją wdrożenia
