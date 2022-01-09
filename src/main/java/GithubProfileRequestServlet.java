@@ -32,10 +32,10 @@ public class GithubProfileRequestServlet extends HttpServlet {
 	
 	private static final String GITHUB_USERS_URL = "https://api.github.com/users/";
 	private static final int GITHUB_REPOS_PER_REQ = 100;
-	
-	private static final int TOP_LANG_NUM = 5;
+	private static final int DEFAULT_TOP_LAN_NUM = 5;
 	
 	private String authToken;
+	private int top_lang_num;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -48,6 +48,12 @@ public class GithubProfileRequestServlet extends HttpServlet {
     public void init() throws ServletException {
     	super.init();
     	authToken = getServletConfig().getInitParameter("oauth_token");
+    	String _top_cnt = getServletConfig().getInitParameter("top_count");
+    	if(_top_cnt == null) {
+    		top_lang_num = DEFAULT_TOP_LAN_NUM;
+    	}else {
+    		top_lang_num = Integer.parseInt(_top_cnt);
+    	}
     }
     
     public Object[] getJSONFromGithubApi(String url) throws IOException {
@@ -190,7 +196,7 @@ public class GithubProfileRequestServlet extends HttpServlet {
 				List<Entry<String, Long>> list = new ArrayList<Entry<String, Long>>(lang_map.entrySet());
 				list.sort((o1, o2) -> o2.getValue().compareTo(o1.getValue()));
 				
-				int top = list.size() < TOP_LANG_NUM ? list.size() : TOP_LANG_NUM;
+				int top = list.size() < top_lang_num ? list.size() : top_lang_num;
 				
 				out.println("<h2>Top " + top + " jezykow:</h2>");
 				for(int i = 0; i < top; i++) {

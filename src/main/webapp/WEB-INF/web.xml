@@ -12,6 +12,10 @@
   <servlet>
   	<servlet-name>GithubProfileRequestServlet</servlet-name>
   	<servlet-class>GithubProfileRequestServlet</servlet-class>
+  	<init-param>
+  		<param-name>top_count</param-name>
+  		<param-value>5</param-value>
+  	</init-param>
   </servlet>
   <servlet-mapping>
   	<servlet-name>GithubProfileRequestServlet</servlet-name>
